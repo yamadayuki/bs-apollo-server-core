@@ -1,25 +1,39 @@
 {
   "name": "@yamadayuki/bs-apollo-server-core",
-  "version": "0.1.0",
-  "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
-    "test": "jest"
-  },
-  "keywords": [
-    "BuckleScript"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.2",
-    "bs-platform": "^3.1.5"
-  },
+  "description": "apollo-server-core binding for ReasonML and BuckleScript",
+  "version": "0.0.0",
+  "author": "yamadayuki",
+  "bugs": "https://github.com/yamadayuki/bs-apollo-server-core/issues",
   "dependencies": {
     "@yamadayuki/bs-graphql": "^0.1.0",
     "apollo-server-core": "^2.0.0-beta.5",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.2",
+    "bs-platform": "^3.1.5"
+  },
+  "homepage": "https://github.com/yamadayuki/bs-apollo-server-core",
+  "keywords": [
+    "apollo",
+    "bucklescript",
+    "graphql",
+    "reason"
+  ],
+  "license": "MIT",
+  "main": "lib/js/src/ApolloServerCore.bs.js",
+  "repository": {
+    "url": "https://github.com/yamadayuki/bs-apollo-server-core"
+  },
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "release": "npm run release-patch",
+    "release-major": "npm version major && git push origin master --tags && npm publish --access=public",
+    "release-minor": "npm version minor && git push origin master --tags && npm publish --access=public",
+    "release-patch": "npm version patch && git push origin master --tags && npm publish --access=public",
+    "start": "bsb -make-world -w",
+    "test": "jest"
   }
 }

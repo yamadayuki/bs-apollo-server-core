@@ -1,7 +1,7 @@
 {
   "name": "@yamadayuki/bs-apollo-server-core",
   "description": "apollo-server-core binding for ReasonML and BuckleScript",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "yamadayuki",
   "bugs": "https://github.com/yamadayuki/bs-apollo-server-core/issues",
   "dependencies": {

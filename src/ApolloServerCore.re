@@ -13,4 +13,9 @@ external runHttpQuery :
   Js.Promise.t(string) =
   "";
 
+type graphqlOptions('rootValue, 'context, 'response) =
+  ApolloServerCore_RunQuery.graphqlOptions('rootValue, 'context, 'response);
+
+module HttpQueryError = ApolloServerCore_RunHttpQuery.Error;
+
 let createGraphQLOptions = createGraphQLOptions;

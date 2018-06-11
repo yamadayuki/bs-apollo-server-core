@@ -1,4 +1,4 @@
-open BsGraphql;
+open GraphQL;
 
 [@bs.deriving jsConverter]
 type logAction = [

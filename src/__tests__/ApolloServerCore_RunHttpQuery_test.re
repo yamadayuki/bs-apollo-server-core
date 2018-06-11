@@ -1,8 +1,6 @@
 open Jest;
 open ExpectJs;
 
-open BsGraphql;
-
 let () =
   describe("runHttpQuery", () =>
     describe("handling a GET query", () => {

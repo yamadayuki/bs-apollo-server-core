@@ -1,5 +1,3 @@
-open GraphQL;
-
 [@bs.deriving jsConverter]
 type logAction = [
   | [@bs.as "request"] `Request

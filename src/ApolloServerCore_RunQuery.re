@@ -17,30 +17,31 @@ type logMessage = {
   .
   "action": logAction,
   "step": logStep,
-  "key": Js.null_undefined(string),
-  "data": Js.null_undefined(Js.Types.obj_val),
+  "key": Js.Null_undefined.t(string),
+  "data": Js.Null_undefined.t(Js.Types.obj_val),
 };
 
 type graphqlOptions('rootValue, 'context, 'response) = {
   .
   "schema": GraphQL.Type.schema,
   "query": string,
-  "rootValue": Js.null_undefined('rootValue),
-  "context": Js.null_undefined('context),
-  "operationName": Js.null_undefined(string),
-  "logFunction": Js.null_undefined(logMessage => unit),
-  "validationRules": Js.null_undefined(GraphQL.Validation.validationConetxt),
+  "rootValue": Js.Null_undefined.t('rootValue),
+  "context": Js.Null_undefined.t('context),
+  "operationName": Js.Null_undefined.t(string),
+  "logFunction": Js.Null_undefined.t(logMessage => unit),
+  "validationRules":
+    Js.Null_undefined.t(GraphQL.Validation.validationConetxt),
   "fieldResolver":
-    Js.null_undefined(
+    Js.Null_undefined.t(
       GraphQL.Type.fieldResolver(Js.Types.obj_val, Js.Types.obj_val),
     ),
-  "formatError": Js.null_undefined(Js.Exn.t => GraphQL.Error.error),
+  "formatError": Js.Null_undefined.t(Js.Exn.t => GraphQL.Error.error),
   "formatResponse":
-    Js.null_undefined(
+    Js.Null_undefined.t(
       GraphQL.Execution.executionResult(Js.Types.obj_val) => Js.t('response),
     ),
-  "debug": Js.null_undefined(bool),
-  "tracing": Js.null_undefined(bool),
+  "debug": Js.Null_undefined.t(bool),
+  "tracing": Js.Null_undefined.t(bool),
 };
 
 let createGraphQLOptions =
